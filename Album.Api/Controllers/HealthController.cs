@@ -3,7 +3,7 @@ using Microsoft.Extensions.Logging;
 using System;
 
 [ApiController]
-[Route("status")]
+[Route("[controller]")]
 public class HealthCheckController : ControllerBase
 {
     private readonly ILogger<HealthCheckController> _logger;
