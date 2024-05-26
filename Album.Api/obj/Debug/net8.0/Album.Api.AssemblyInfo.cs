@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Album.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ca3288d9a86b802ca0c8279a81a5b86ad2177b4f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aa9707d425dc9837cac2a26f94034243eecadc9b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Album.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Album.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

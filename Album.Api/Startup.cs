@@ -1,5 +1,6 @@
 using Album.Api.Services;
 
+
 namespace Album.Api
 {
     public class Startup
@@ -36,7 +37,6 @@ namespace Album.Api
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
-
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 

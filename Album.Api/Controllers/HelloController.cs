@@ -21,8 +21,7 @@ namespace Album.Api.Controllers
 
         [HttpGet("hello")]
         public IActionResult Get([FromQuery] string name = null)
-        {
-            
+        {        
             var response = _greetingService.GetGreeting(name);
             _logger.LogCritical(name);
             return Ok(new Message { text = response });
