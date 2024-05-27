@@ -45,8 +45,8 @@ jobs:
 
     - name: Tag the Docker image for ECR
       run: |
-        docker tag testalbumimage:latest ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.us-east-1.amazonaws.com/cnsd/album:latest
+        docker tag testalbumimage:latest ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.us-east-1.amazonaws.com/cnsd/album:${{github.run_number}}
 
     - name: Push Docker image to Amazon ECR
       run: |
-        docker push ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.us-east-1.amazonaws.com/cnsd/album:latest
+        docker push ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.us-east-1.amazonaws.com/cnsd/album:${{github.run_number}}
