@@ -1,4 +1,20 @@
-# Stage 1: Build
+# Stage 1: Test
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS test
+WORKDIR /app
+
+# Copy csproj and restore as distinct layers
+COPY *.sln .
+COPY Album.Api/*.csproj ./Album.Api/
+COPY Album.Api.Tests/*.csproj ./Album.Api.Tests/
+RUN dotnet restore
+
+# Copy everything else and build
+COPY Album.Api/. ./Album.Api/
+COPY Album.Api.Tests/. ./Album.Api.Tests/
+WORKDIR /app/Album.Api.Tests
+RUN dotnet test
+
+# Stage 2: Build
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 
 # Metadata
@@ -19,7 +35,7 @@ COPY Album.Api/. ./Album.Api/
 WORKDIR /app/Album.Api
 RUN dotnet publish -c Release -o out
 
-# Stage 2: Serve
+# Stage 3: Serve
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
 COPY --from=build /app/Album.Api/out .
