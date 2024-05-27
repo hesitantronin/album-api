@@ -17,11 +17,6 @@ RUN dotnet test
 # Stage 2: Build
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 
-# Metadata
-LABEL maintainer="Ronin van Egdom studNr.(1053927)"
-LABEL description="This image contains the Album.Api backend"
-LABEL version="version1.0"
-
 # Set working dir in container
 WORKDIR /app
 
@@ -46,3 +41,8 @@ EXPOSE 80
 
 # Entry point for the application
 ENTRYPOINT ["dotnet", "Album.Api.dll"]
+
+# Metadata
+LABEL maintainer="Ronin van Egdom studNr.(1053927)"
+LABEL description="This image contains the Album.Api backend"
+LABEL version="version1.0"
