@@ -41,12 +41,12 @@ jobs:
 
     - name: Log in to Amazon ECR
       run: |
-        aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.us-east-1.amazonaws.com
+        aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin ${{ secrets.AWS_ACCOUNT_ID }}.396630041049.dkr.ecr.us-east-1.amazonaws.com/cnsd/album
 
     - name: Tag the Docker image for ECR
       run: |
-        docker tag testalbumimage:latest ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.us-east-1.amazonaws.com/cnsd/album:latest
+        docker tag testalbumimage:latest ${{ secrets.AWS_ACCOUNT_ID }}.396630041049.dkr.ecr.us-east-1.amazonaws.com/cnsd/album/cnsd/album:latest
 
     - name: Push Docker image to Amazon ECR
       run: |
-        docker push ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.us-east-1.amazonaws.com/cnsd/album:latest
+        docker push ${{ secrets.AWS_ACCOUNT_ID }}.396630041049.dkr.ecr.us-east-1.amazonaws.com/cnsd/album/cnsd/album:latest
