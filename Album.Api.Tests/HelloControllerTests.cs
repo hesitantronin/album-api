@@ -30,7 +30,6 @@ public class HelloControllerTests
 
         // Act
         var result = _controller.Get(name) as OkObjectResult;
-        Console.WriteLine("whomphwomp");
 
         // Assert
         Assert.NotNull(result);
