@@ -2,31 +2,20 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS test
 WORKDIR /app
 
-# Copy csproj and restore as distinct layers
-COPY *.sln .
-COPY Album.Api/*.csproj ./Album.Api/
-COPY Album.Api.Tests/*.csproj ./Album.Api.Tests/
+# Copy everything and restore as distinct layers
+COPY . .
 RUN dotnet restore
 
-# Copy everything else and build
-COPY Album.Api/. ./Album.Api/
-COPY Album.Api.Tests/. ./Album.Api.Tests/
+# Run unit tests
 WORKDIR /app/Album.Api.Tests
 RUN dotnet test
 
 # Stage 2: Build
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-
-# Set working dir in container
 WORKDIR /app
 
-# Copy csproj and restore as distinct layers
-COPY *.sln .
-COPY Album.Api/*.csproj ./Album.Api/
-RUN dotnet restore
-
-# Copy everything else and build
-COPY Album.Api/. ./Album.Api/
+# Copy everything and build
+COPY . .
 WORKDIR /app/Album.Api
 RUN dotnet publish -c Release -o out
 
@@ -41,6 +30,7 @@ EXPOSE 80
 
 # Entry point for the application
 ENTRYPOINT ["dotnet", "Album.Api.dll"]
+
 
 # Metadata
 LABEL maintainer="Ronin van Egdom studNr.(1053927)"
