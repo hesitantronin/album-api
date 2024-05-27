@@ -28,4 +28,4 @@ jobs:
       run: dotnet test --no-build --verbosity normal
 
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag testAlbumImage:$(date +%s)
+      run: docker build . --file Dockerfile --tag testalbumimage:$(date +%s)
