@@ -1,5 +1,4 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:396630041049:task-definition/AlbumTaskDefinition:2",
     "containerDefinitions": [
         {
             "name": "AlbumContainer",
@@ -36,43 +35,8 @@
     "taskRoleArn": "arn:aws:iam::396630041049:role/LabRole",
     "executionRoleArn": "arn:aws:iam::396630041049:role/LabRole",
     "networkMode": "awsvpc",
-    "revision": 2,
     "volumes": [],
-    "status": "ACTIVE",
-    "requiresAttributes": [
-        {
-            "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
-        },
-        {
-            "name": "ecs.capability.execution-role-awslogs"
-        },
-        {
-            "name": "com.amazonaws.ecs.capability.ecr-auth"
-        },
-        {
-            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
-        },
-        {
-            "name": "com.amazonaws.ecs.capability.task-iam-role"
-        },
-        {
-            "name": "ecs.capability.execution-role-ecr-pull"
-        },
-        {
-            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
-        },
-        {
-            "name": "ecs.capability.task-eni"
-        },
-        {
-            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.29"
-        }
-    ],
     "placementConstraints": [],
-    "compatibilities": [
-        "EC2",
-        "FARGATE"
-    ],
     "requiresCompatibilities": [
         "FARGATE"
     ],
@@ -81,8 +45,5 @@
     "runtimePlatform": {
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
-    },
-    "registeredAt": "2024-05-29T18:48:44.729Z",
-    "registeredBy": "arn:aws:sts::396630041049:assumed-role/voclabs/user3241260=Ronin_van_Egdom",
-    "tags": []
+    }
 }
