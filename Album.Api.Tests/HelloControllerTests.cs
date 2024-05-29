@@ -26,7 +26,7 @@ public class HelloControllerTests
     {
         // Arrange
         var name = "John Cloud";
-        var expectedResponse = $"Hello John Cloud from {Dns.GetHostName()}";
+        var expectedResponse = $"Hello John Cloud from {Dns.GetHostName()} v2";
         _mockGreetingService.Setup(service => service.GetGreeting(name)).Returns(expectedResponse);
 
         // Act

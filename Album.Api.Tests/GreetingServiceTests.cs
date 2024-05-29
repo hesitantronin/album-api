@@ -21,7 +21,7 @@ public class greetingServiceTests
     {
         // Arange
         string name = "John ASP.NET";
-        string expectedResponse = $"Hello John ASP.NET from {Dns.GetHostName()}";
+        string expectedResponse = $"Hello John ASP.NET from {Dns.GetHostName()} v2";
 
         // Act
         var result = _greetingService.GetGreeting(name);
