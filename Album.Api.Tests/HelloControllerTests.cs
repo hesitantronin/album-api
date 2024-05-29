@@ -4,6 +4,7 @@ using Album.Api.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Moq;
+using System.Net;
 
 namespace Album.Api.Tests;
 
@@ -25,7 +26,7 @@ public class HelloControllerTests
     {
         // Arrange
         var name = "John Cloud";
-        var expectedResponse = "Hello John Cloud";
+        var expectedResponse = $"Hello John Cloud from {Dns.GetHostName()}";
         _mockGreetingService.Setup(service => service.GetGreeting(name)).Returns(expectedResponse);
 
         // Act

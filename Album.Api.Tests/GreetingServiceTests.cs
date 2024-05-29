@@ -3,6 +3,7 @@ using Album.Api.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Moq;
+using System.Net;
 
 namespace Album.Api.Tests;
 
@@ -20,7 +21,7 @@ public class greetingServiceTests
     {
         // Arange
         string name = "John ASP.NET";
-        string expectedResponse = "Hello John ASP.NET";
+        string expectedResponse = $"Hello John ASP.NET {Dns.GetHostName()}";
 
         // Act
         var result = _greetingService.GetGreeting(name);
