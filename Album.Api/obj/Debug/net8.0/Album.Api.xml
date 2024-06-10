@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Album.Api</name>
+    </assembly>
+    <members>
+        <member name="T:Album.Api.Controllers.AlbumController">
+            <summary>
+            API Controller for managing albums.
+            </summary>
+        </member>
+        <member name="M:Album.Api.Controllers.AlbumController.GetAlbums">
+            <summary>
+            Gets all albums.
+            </summary>
+            <returns>A list of albums.</returns>
+            <response code="200">Returns the list of albums</response>
+        </member>
+        <member name="M:Album.Api.Controllers.AlbumController.GetAlbum(System.Int32)">
+            <summary>
+            Retrieves a specific album by unique id.
+            </summary>
+            <param name="id">The album id.</param>
+            <returns>The album with the specified id.</returns>
+            <response code="200">Album retrieved</response>
+            <response code="404">Album was not found</response>
+            <response code="500">Cannot find albums right now</response>
+        </member>
+        <member name="M:Album.Api.Controllers.AlbumController.PutAlbum(System.Int32,Album.Api.Models.Album)">
+            <summary>
+            Updates an album.
+            </summary>
+            <param name="id">The album id.</param>
+            <param name="album">The album to update.</param>
+            <returns>A response indicating the result of the update operation.</returns>
+            <response code="204">Album updated successfully</response>
+            <response code="400">The album id does not match the URL id</response>
+            <response code="404">Album was not found</response>
+        </member>
+        <member name="M:Album.Api.Controllers.AlbumController.PostAlbum(Album.Api.Models.Album)">
+            <summary>
+            Creates a new album.
+            </summary>
+            <param name="album">The album to create.</param>
+            <returns>The created album.</returns>
+            <response code="201">Album created successfully</response>
+        </member>
+        <member name="M:Album.Api.Controllers.AlbumController.DeleteAlbum(System.Int32)">
+            <summary>
+            Deletes a specific album by unique id.
+            </summary>
+            <param name="id">The album id.</param>
+            <returns>A response indicating the result of the delete operation.</returns>
+            <response code="204">Album deleted successfully</response>
+            <response code="404">Album was not found</response>
+        </member>
+        <member name="T:Album.Api.Migrations.InitCreate">
+            <inheritdoc />
+        </member>
+        <member name="M:Album.Api.Migrations.InitCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Album.Api.Migrations.InitCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Album.Api.Migrations.InitCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

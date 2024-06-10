@@ -1,4 +1,7 @@
 using Album.Api.Services;
+using Album.Api.Data;
+using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 
 
 namespace Album.Api
@@ -15,10 +18,19 @@ namespace Album.Api
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<album_DbContext>(options => 
+                options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
+
             services.AddControllers();
             services.AddEndpointsApiExplorer();
-            services.AddSwaggerGen();
+            services.AddSwaggerGen(options =>
+            {
+                var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
+            });
 
+            
+            services.AddScoped<IAlbumService, AlbumService>();
             services.AddScoped<IGreetingService, GreetingService>();
         }
 

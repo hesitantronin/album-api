@@ -13,7 +13,10 @@
                 }
             ],
             "essential": true,
-            "environment": [],
+            "environment": [{
+                "name": "CONNECTIONSTRINGS__DEFAULTCONNECTION",
+                "value": "<connectionstring>"
+            }],
             "environmentFiles": [],
             "mountPoints": [],
             "volumesFrom": [],
