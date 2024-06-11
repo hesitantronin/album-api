@@ -45,9 +45,8 @@ namespace Album.Api.IntegrationTests
                         var scopedServices = scope.ServiceProvider;
                         var db = scopedServices.GetRequiredService<album_DbContext>();
 
-                        db.Database.EnsureCreated(); // Ensure database is created
+                        db.Database.EnsureCreated(); 
 
-                        // Seed some test data
                         SeedTestData(db);
                     }
                 });
