@@ -15,7 +15,7 @@
             "essential": true,
             "environment": [{
                 "name": "CONNECTIONSTRINGS__DEFAULTCONNECTION",
-                "value": "<connectionstring>"
+                "value": "Host=cnsd-db-396630041049.cabagmkb212b.us-east-1.rds.amazonaws.com;Port=5432;Username=postgresmyself;Password=3fS8}yv+XxAa=!;Database=albumdatabase"
             }],
             "environmentFiles": [],
             "mountPoints": [],

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XyNYwI3jIEgqKsQTC7L6r64kXeR+Cn8p0Kqfg40XV3+op/9kW0acEOA0qbF5BTJQC72UbdlnWb0ZWceHGBZZbg==",
+  "dgSpecHash": "OMPnx7MTHfM6Su01zunT5q6BNOVaI80KePhhvkHdMd8knzHQjikTlKwP6jZQ812MvOnPOFjkbaF8NkxtA/BeKg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Redux Gamer\\Documents\\GitHub\\album-api\\Album.Api\\Album.Api.csproj",
+  "projectFilePath": "c:\\Users\\Redux Gamer\\Documents\\GitHub\\album-api\\Album.Api\\Album.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Redux Gamer\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Redux Gamer\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

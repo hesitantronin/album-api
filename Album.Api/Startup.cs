@@ -1,5 +1,6 @@
 using Album.Api.Services;
 using Album.Api.Data;
+using Album.Api.Repositories;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 
@@ -32,6 +33,7 @@ namespace Album.Api
             
             services.AddScoped<IAlbumService, AlbumService>();
             services.AddScoped<IGreetingService, GreetingService>();
+            services.AddScoped<IAlbumRepository, AlbumRepository>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

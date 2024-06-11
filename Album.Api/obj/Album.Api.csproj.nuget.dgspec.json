@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Redux Gamer\\Documents\\GitHub\\album-api\\Album.Api\\Album.Api.csproj": {}
+    "c:\\Users\\Redux Gamer\\Documents\\GitHub\\album-api\\Album.Api\\Album.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Redux Gamer\\Documents\\GitHub\\album-api\\Album.Api\\Album.Api.csproj": {
+    "c:\\Users\\Redux Gamer\\Documents\\GitHub\\album-api\\Album.Api\\Album.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Redux Gamer\\Documents\\GitHub\\album-api\\Album.Api\\Album.Api.csproj",
+        "projectUniqueName": "c:\\Users\\Redux Gamer\\Documents\\GitHub\\album-api\\Album.Api\\Album.Api.csproj",
         "projectName": "Album.Api",
-        "projectPath": "C:\\Users\\Redux Gamer\\Documents\\GitHub\\album-api\\Album.Api\\Album.Api.csproj",
+        "projectPath": "c:\\Users\\Redux Gamer\\Documents\\GitHub\\album-api\\Album.Api\\Album.Api.csproj",
         "packagesPath": "C:\\Users\\Redux Gamer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Redux Gamer\\Documents\\GitHub\\album-api\\Album.Api\\obj\\",
+        "outputPath": "c:\\Users\\Redux Gamer\\Documents\\GitHub\\album-api\\Album.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Redux Gamer\\AppData\\Roaming\\NuGet\\NuGet.Config"
