@@ -18,6 +18,7 @@ namespace Album.Api.IntegrationTests
 
     public class AlbumApiIntegrationTests : IClassFixture<WebApplicationFactory<Startup>>
     {
+        // Bingbong
 
         private readonly WebApplicationFactory<Startup> _factory;
 
@@ -45,7 +46,7 @@ namespace Album.Api.IntegrationTests
                         var scopedServices = scope.ServiceProvider;
                         var db = scopedServices.GetRequiredService<album_DbContext>();
 
-                        db.Database.EnsureCreated(); 
+                        db.Database.EnsureCreated();
 
                         SeedTestData(db);
                     }
