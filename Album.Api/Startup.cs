@@ -23,6 +23,7 @@ namespace Album.Api
                 options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddControllers();
+            services.AddCors();
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen(options =>
             {
@@ -38,6 +39,11 @@ namespace Album.Api
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseCors(policy => policy
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .AllowAnyOrigin());
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
