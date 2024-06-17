@@ -18,7 +18,6 @@ namespace Album.Api.IntegrationTests
 
     public class AlbumApiIntegrationTests : IClassFixture<WebApplicationFactory<Startup>>
     {
-        // Bingbong
 
         private readonly WebApplicationFactory<Startup> _factory;
 
